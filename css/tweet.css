@@ -2,14 +2,16 @@ body, h2{
 	margin:0; 
 	padding:0; 
 	font-size:20px;
-	font-family: Georgia, serif, Lato,"PingFang SC", "Microsoft YaHei", sans-serif;;
+	font-family: Georgia, serif, Lato,"PingFang SC", "Microsoft YaHei", sans-serif;
 }
 div { 
 	/*text-align:center; */
 }
 .head { 
 	height:8px;
-	background:#000000
+	background:#000000;
+	width: 100%;
+	min-width:1296px;
 }
 .left { 
 	width:480px; 
@@ -148,6 +150,8 @@ div {
 	clear:both;
 	line-height:50px;
 	text-align:center;
+	width:100%;
+	min-width:1296px;
 }
 a {
 	text-decoration: none;
