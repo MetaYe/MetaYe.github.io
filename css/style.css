@@ -1,8 +1,7 @@
-body, h2{ 
+* { 
 	margin:0; 
 	padding:0; 
-	font-size:18px;
-	font-family: Georgia, serif, Lato,"PingFang SC", "Microsoft YaHei", sans-serif;
+	font-family: Lato,"PingFang SC", "Microsoft YaHei", sans-serif;
 }
 div { 
 	text-align:center; 
@@ -20,6 +19,12 @@ div {
 	padding-top:20px;
 	padding-right: 20px;
 }
+.left li {
+	font-family: "Microsoft YaHei";
+	height: 30px;
+	line-height: 30px;
+	font-size: 14.5px;
+}
 .main{
 	margin:0;
 	height:60%; 
@@ -35,18 +40,18 @@ div {
 }
 .main li {
 	padding-left: 3.5%;
-	margin: 0;
+	height: 35px;
+	line-height: 35px;
 }
 .main a {
 	font-family: "Microsoft YaHei";
 	line-height: 1.5em;
-	font-size: 16px;
+	font-size: 14px;
 	color:#1E90FF;
 }
 .main p {
-	font-size: 24px;
+	font-size: 18px;
 	margin: 0;
-	padding-top: 2%;
 }
 
 .main .meta {
@@ -57,7 +62,6 @@ div {
 }
 
 .main .meta p {
-	margin: 0;
 	text-align:left;
 }
 
@@ -74,8 +78,6 @@ div {
 	font-size:15px;
 }
 .meta p {
-	margin: 0;
-	padding: 0;
 	text-align: right;
 	line-height: normal;
 	font-size: x-small;
@@ -85,16 +87,14 @@ div {
 	margin-top:10px;
 }
 .gotop {
-	background: url("../images/gotop.jpg") 0 0 no-repeat;
-	background-size: 40px 40px;
-	width: 40px;
-	height: 40px;
+	background: url("../images/gotop.jpg") no-repeat 50% 0 ;
+	border-radius: 5px;
+	background-size: 48px 98px;
+	width: 48px;
+	height: 48px;
 }
 .gotop:hover {
-	background: url("../images/gotop2.jpg") 0 0 no-repeat;
-	background-size: 40px 40px;
-	width: 40px;
-	height: 40px;
+	background: url("../images/gotop.jpg") no-repeat 50% 95% ;
 }
 .right { 
 	width:25%;

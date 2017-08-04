@@ -120,25 +120,15 @@ div {
 	height:126px;
 }
 .gotop {
-	background: url("../images/gotop.jpg") 0 0 no-repeat;
-	background-size: 40px 40px;
-	width: 40px;
-	height: 40px;
+	background: url("../images/gotop.jpg") no-repeat 50% 0 ;
+	background-size: 48px 98px;
+	border-radius: 5px;
+	width: 48px;
+	height: 48px;
 }
 .gotop:hover {
-	background: url("../images/gotop2.jpg") 0 0 no-repeat;
-	background-size: 40px 40px;
-	width: 40px;
-	height: 40px;
+	background: url("../images/gotop.jpg") no-repeat 50% 95% ;
 }
-/*
-.right { 
-	width:0; 
-	height:700px;
-	float:right; 
-	padding-top:20px;
-}
-*/
 .back {
 	position: fixed;
 	right: 328px;
