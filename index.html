@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Lalamimi | 一个有趣的站点</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" href="images/logo.png">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shorcut icon" href="images/logo.png">
+    <script src="js/some.js"></script>
+    <title>lalamimi | 一个有趣的站点...</title>
+</head>
 <body>
-    <div class="head"></div><!--头部-->
+    <div class="header"></div>
 
-    <div class="left"><!--左边-->
-    	<li><a href="http://lalamimi.com">首页</a></li>
-    	<li><a href="https://github.com/MetaYe/MetaYe.github.io/tree/master/_post">旧文</a></li>
-    	<li><a href="http://lalamimi.com/cartesian-theater.html">笛卡尔剧场</a></li>
-    	<li><a href="http://lalamimi.com/commenter.html">评论</a></li>
-    	<li><a href="http://lalamimi.com/about.html">关于</a></li>
+    <div class="main w">
+        <div class="left">
+            <ul>
+                <li><a href="http://lalamimi.com">首页</a></li>
+                <li><a href="https://github.com/MetaYe/MetaYe.github.io/tree/master/_post">旧文</a></li>
+                <li><a href="http://lalamimi.com/cartesian-theater.html">笛卡尔剧场</a></li>
+                <li><a href="http://lalamimi.com/commenter.html">评论</a></li>
+                <li><a href="http://lalamimi.com/about.html">关于</a></li>
+            </ul>
+        </div>
+        <div class="article" id="post">          
+            <ul>
+                <li class="year">2017</li>
+                <li><time>4-19</time><a href="articles/wen-da.html">问答</a></li>
+                <li class="year">2016</li>
+                <li><time>11-06</time><a href="articles/gan-zhi.html">感知</a></li>
+                <li><time>10-17</time><a href="articles/zi-wen-zi-da.html">自问自答:一个关于编程的问答(Q&A形式)</a></li>
+                <li><time>10-05</time><a href="articles/ren-de-jiao-ji-jing-yan-guan-cha.html">人的交际经验观察</a></li>
+                <li><time>9-12</time><a href="articles/yi-lu-zou-lai.html">一路走来</a></li>   
+            </ul>
+        </div>
+        <div class="gotop">
+            <a href="javascript:scroll(0,0)"><i></i></a>
+        </div>
     </div>
 
-    <div class="main"><!--主窗口-->
-    	
-        <p>2017</p><!--年标签-->
-    	<li><i>4-19</i>&nbsp;<a href="articles/wen-da.html"> 问答 </a></li>
-
-    	<p>2016</p><!--年标签-->
-    	<li><i>11-06</i>&nbsp;<a href="articles/gan-zhi.html"> 感知 </a></li>
-    	<li><i>10-17</i>&nbsp;<a href="articles/zi-wen-zi-da.html"> 自问自答:一个关于编程的问答(Q&A形式) </a></li>
-    	<li><i>10-05</i>&nbsp;<a href="articles/ren-de-jiao-ji-jing-yan-guan-cha.html"> 人的交际经验观察 </a></li>
-    	<li><i>9-12</i>&nbsp;<a href="articles/yi-lu-zou-lai.html"> 一路走来 </a></li>
-
-    </div>
-
-    <div class="back"><!--返回顶部-->
-    	<a href="javascript:scroll(0,0)""><div class="gotop"></div></a>
-    </div>
-
-    <div class="footer"><!--底部-->
-    	<p> Copyright &copy; 2016 <a href="http://lalamimi.com">Lalamimi</a>. All Rights Reserved. </a> Themes by <a href="http://lalamimi.com/about.html"> 木馍 </a></p>
-    </div>
+    <div class="footer" id="foot">
+        <p>
+            Copyright © <time id="date">2016</time> 
+            <a href="/">Lalamimi</a>. 
+            All Rights Reserved. Themes by <a href="/">木馍</a>
+        </p>
+    </div>    
 </body>
 </html>

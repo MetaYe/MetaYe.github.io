@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-		<title>lalamimi | 感知 </title>
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="shortcut icon" href="../images/logo.png">
-	</head>
-
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/article.css">
+    <link rel="shorcut icon" href="../images/logo.png">
+    <script src="../js/some.js"></script>
+    <title>lalamimi | 一个有趣的站点...</title>
+</head>
 <body>
-	<div class="head"></div><!--头部-->
+    <div class="header"></div>
 
-	<div class="left"><!--左边-->
-		<li><a href="http://lalamimi.com">首页</a></li>
-		<li><a href="https://github.com/MetaYe/MetaYe.github.io/tree/master/_post">旧文</a></li>
-		<li><a href="http://lalamimi.com/commenter.html">评论</a></li>
-		<li><a href="http://lalamimi.com/about.html">关于</a></li>
-	</div>
-
-	<div class="main"><!--主窗口-->
-		<h2 class="title"> 感知 </h2><a href="1f"></a>
+    <div class="main w">
+        <div class="left">
+            <ul>
+                <li><a href="http://lalamimi.com">首页</a></li>
+                <li><a href="https://github.com/MetaYe/MetaYe.github.io/tree/master/_post">旧文</a></li>
+                <li><a href="http://lalamimi.com/cartesian-theater.html">笛卡尔剧场</a></li>
+                <li><a href="http://lalamimi.com/commenter.html">评论</a></li>
+                <li><a href="http://lalamimi.com/about.html">关于</a></li>
+            </ul>
+        </div>
+        <div class="article" id="post">          
+            <h2 class="title">感知</h2>
 	        <div class="meta">
-	            <p>Posted on 11-06  2016 · in <a href="#"> 杂文 </a> · by <a href="http://lalamimi.com/about.html"> 木馍 </a><br />
+                <p>
+                    Postedon&nbsp;on&nbsp;
+                    <time>11-06,&nbsp;2016</time>&nbsp;in&nbsp; 
+                    <a href="#">杂文</a>&nbsp;by&nbsp; 
+                    <a href="http://lalamimi.com/about.html">木馍</a>
+                </p>
 	        </div>
 			
 			<div class="story">
@@ -41,14 +50,18 @@
 
 				正如哈耶克说的，不依赖文字思考，之后组织语言。这可能也解释了我为什么对某些说出来的想法，会词不达意的现象。关于这个话题我感觉自己好象还有一些想说的话，不过暂且是想不出来了。也许过两天，我在做某件事时，非刻意的情况下突然意识到还想说点什么。不过根据经验，肯定不会再添加修改。<br><br>		
 	        </div>
-	</div>
+        </div>
+        <div class="gotop">
+            <a href="javascript:scroll(0,0)"><i></i></a>
+        </div>
+    </div>
 
-	<div class="back">
-		<a href="javascript:scroll(0,0)""><div class="gotop"></div></a>
-	</div>
-
-	<div class="footer"><!--底部-->
-		<p> Copyright &copy; 2016 <a href="http://lalamimi.com">Lalamimi</a>. All Rights Reserved. </a> Themes by <a href="http://lalamimi.com/about.html"> 木馍 </a></p>
-	</div>
+    <div class="footer" id="foot">
+        <p>
+            Copyright © <time id="date">2016</time> 
+            <a href="/">Lalamimi</a>. 
+            All Rights Reserved. Themes by <a href="/">木馍</a>
+        </p>
+    </div>    
 </body>
 </html>

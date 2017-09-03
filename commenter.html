@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-		<title>Lalamimi | 一个有趣的站点 </title>
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="shortcut icon" href="images/logo.png">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="shorcut icon" href="images/logo.png">
+    <script src="../js/some.js"></script>
+    <title>lalamimi | 关于</title>
+</head>
 <body>
-	<div class="head" style="width:100%;min-width:1296px"></div><!--头部-->
+    <div class="header"></div>
 
-	<div class="left"><!--左边-->
-		<li><a href="http://lalamimi.com">Home</a></li>
-		<li><a href="https://github.com/MetaYe/MetaYe.github.io/tree/master/_post">History</a></li>
-		<li><a href="http://lalamimi.com/cartesian-theater.html">Cartesian Theater</a></li>
-		<li><a href="http://lalamimi.com/commenter.html">Comment</a></li>
-		<li><a href="http://lalamimi.com/about.html">About</a></li>
-	</div>
+    <div class="main w">
+        <div class="left">
+            <ul>
+                <li><a href="http://lalamimi.com">首页</a></li>
+                <li><a href="https://github.com/MetaYe/MetaYe.github.io/tree/master/_post">旧文</a></li>
+                <li><a href="http://lalamimi.com/cartesian-theater.html">笛卡尔剧场</a></li>
+                <li><a href="http://lalamimi.com/commenter.html">评论</a></li>
+                <li><a href="http://lalamimi.com/about.html">关于</a></li>
+            </ul>
+        </div>
+        <div class="article" id="post">          
+            <h2 class="title">关于</h2>
+	        <div class="meta">
+                <p></p>
+	        </div>
+			
+			<div class="story">
+                <p>暂不开放...</p>
+			</div>
+        </div>
+        <div class="gotop">
+            <a href="javascript:scroll(0,0)"><i></i></a>
+        </div>
+    </div>
 
-	<div class="main"><!--主窗口-->
-		<p>评论区</p><!--年标签-->
-	</div>
-
-	<div class="back"><!--返回顶部-->
-		<a href="javascript:scroll(0,0)""><div class="gotop"></div></a>
-	</div>
-
-	<div class="footer" style="width:100%;min-width:1296px"><!--底部-->
-		<p> Copyright &copy; 2016 <a href="http://lalamimi.com">Lalamimi</a>. All Rights Reserved. </a> Themes by <a href="http://lalamimi.com/about.html"> 木馍 </a></p>
-	</div>
-	
+    <div class="footer" id="foot">
+        <p>
+            Copyright © <time id="date">2016</time> 
+            <a href="/">Lalamimi</a>. 
+            All Rights Reserved. Themes by <a href="/">木馍</a>
+        </p>
+    </div>    
 </body>
 </html>

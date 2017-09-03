@@ -1,0 +1,111 @@
+@charset 'utf-8';
+
+body, html, div, p, ul, h2 {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    font-size: 12px;
+    font-family: Lato,"PingFang SC", "Microsoft YaHei", sans-serif;;
+}
+a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+a:hover {
+    color: #008000;
+}
+
+.w {
+    width: 1090px;
+    margin: 0 auto;
+}
+.header {
+    width: 100%;
+    min-width: 1090px;
+    height: 8px;
+    background-color: #008000;
+}
+.main .left {
+    width: 15%;
+    min-width: 163.5px;
+    float: left;
+    text-align: right;
+}
+.left li {
+    font-size: 16px;
+    padding: 6px 20px 6px 0;
+}
+.main .article {
+    width: 70%;
+    min-width: 763px;
+    height: 100%;
+    min-height: 400px;
+    float: left;
+    border-left: 3px solid #eee;
+    margin: 7px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+}
+.article li {
+    font-size: 15px;
+    padding: 7px 0;
+    text-indent: 1.5em;
+}
+.article .year {
+    font-size: 18px;
+    text-indent: 0;
+    font-family: "Microsoft YaHei";
+}
+.article time {
+    font-family: "Microsoft YaHei";
+}
+.article a {
+    padding: 10px;
+}
+.main .gotop {
+    width: 15%;
+    float: right;
+    min-width: 163.5px;
+    height: 60%;
+    position: fixed;
+    bottom: -100px; 
+    right: 135.5px;
+}
+.gotop i {
+    display: inline-block;
+    width: 42px;
+    height: 41px;
+    background-image: url(../images/gotop.jpg); 
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+}
+.gotop i:hover {
+    background-image: url(../images/gotop.jpg);
+    background-position: 0 bottom;
+}
+.footer {
+    clear: both;
+    width: 100%;
+    min-width: 1090px;
+    background-color: #008000;
+    height: 60px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 60px;
+    position: fixed;
+    bottom: 0;
+}
+.footer a {
+    color: #fff;
+    font-family: "Microsoft YaHei"
+}
+.footer a:hover {
+    color: #000;
+}
