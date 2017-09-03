@@ -7,7 +7,7 @@ window.onload = function() {
     $('date').innerHTML = d.getFullYear();
 
     var oP = $('post').scrollHeight;
-    var oW = window.innerHeight - 108;
+    var oW = window.innerHeight - 98;
     var oF = document.getElementById('foot');
 
     if(oP>oW) {
