@@ -95,10 +95,10 @@ a:hover {
     width: 100%;
     min-width: 1090px;
     background-color: #008000;
-    height: 60px;
+    height: 35px;
     text-align: center;
-    font-size: 14px;
-    line-height: 60px;
+    font-size: 10px;
+    line-height: 35px;
     position: fixed;
     bottom: 0;
 }

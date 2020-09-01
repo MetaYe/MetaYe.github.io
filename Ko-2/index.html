@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>joome | index...</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<script src="vue.js"></script>	
+	<script src="data.js"></script>
+</head>
+<body>
+	<header>
+		<iframe id="fancybox-frame" name="fancybox-frame1588825646847" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=40&h=25&w=310"></iframe> 
+	</header>
+
+	<div id="app">
+		<div>
+			<input type="text" id="search-btn" placeholder="请输入搜索关键词..." v-model="message">
+			<!-- <i class="app-left"></i> -->
+			<i class="app-right" v-on:click="search"></i>
+		</div>
+
+		<div class="addr-box">
+			<p style="position: absolute;">登录·网页</p>
+			<div class="inner-box" v-for="to in todo" v-on:click="go(to.addr)">
+				<img :src="to.img" />
+				<span>{{to.name}}</span>
+			</div>
+		</div>
+
+		<div class="addr-box">
+			<p style="position: absolute;">金融·关注</p>
+			<div class="inner-box" v-for="to in todo" v-on:click="go(to.addr)">
+				<img :src="to.img" />
+				<span>{{to.name}}</span>
+			</div>
+		</div>
+			
+	</div>
+
+	<footer class="footer">
+		<span id="hitokoto">@joome</span>
+	</footer>
+
+	<div id="get-top" title="回到顶部" style="display: none;"><i class="icon icon-arrow-up"></i></div>
+
+<script>
+	var app = new Vue({
+		el: '#app',
+		data: {
+			message: '',
+			todo: login
+		},
+		methods: {
+			search:function(params) {
+				window.open("https://cn.bing.com/search?q=" + this.message)
+			},
+			go:function(params) {
+				window.open(params)
+			}
+		}
+	})
+</script>
+
+</body>
+</html>

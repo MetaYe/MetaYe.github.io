@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/article.css">
+    <link rel="shorcut icon" href="images/logo.png">
+
+    <script src="js/some.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+	<div class="header"></div>
+    <div class="main w">
+
+        <div class="left">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="https://github.com/MetaYe/MetaYe.github.io/tree/master/_post">旧文</a></li>
+                <li><a href="cartesian-theater.html">笛卡尔剧场</a></li>
+                <li><a href="commenter.html">评论</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+
+        <div class="article" id="post">          
+            <h2 class="title">{{ todos.title }}</h2>
+	        <div class="meta">
+                <p>
+                    Posted&nbsp;on&nbsp;
+                    <time>{{ todos.date }}</time>&nbsp;in&nbsp; 
+                    <a href="#">{{ todos.category }}</a>&nbsp;by&nbsp; 
+                    <a href="about.html">{{ todos.author }}</a>
+                </p>
+	        </div>	
+
+			<div id="content" class="story"></div>		
+
+        </div>
+
+        <div class="gotop">
+            <a href="javascript:scroll(0,0)"><i></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer" id="foot">
+        <p>
+            Copyright © <time id="date">2016</time> 
+            <a href="/">Lalamimi</a>. 
+            All Rights Reserved. Themes by <a href="/">木馍</a>
+        </p>
+    </div> 
+</div>
+
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				todos: JSON.parse(sessionStorage.getItem('key'))
+			},
+			mounted() {
+				this.setContent()
+			},
+			methods: {
+				setContent: function () {
+					to = '/articles/' + this.todos['title'] + '.md'
+					axios.get(to).then(res => {
+						var content = res.data
+						document.getElementById("content").innerHTML = marked(content)
+						document.title = 'lalamimi | ' + this.todos['title']
+					})
+				}
+			}
+		})
+	</script>
+</body>
+</html>

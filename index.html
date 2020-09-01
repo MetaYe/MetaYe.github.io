@@ -1,65 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>lalamimi | 一个有趣的站点...</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shorcut icon" href="images/logo.png">
+
     <script src="js/some.js"></script>
-    <title>lalamimi | 一个有趣的站点...</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div class="header"></div>
 
+<div id="app">
+    <div class="header"></div>
     <div class="main w">
         <div class="left">
             <ul>
-                <li><a href="http://lalamimi.com">首页</a></li>
+                <li><a href="/">首页</a></li>
                 <li><a href="https://github.com/MetaYe/MetaYe.github.io/tree/master/_post">旧文</a></li>
-                <li><a href="http://lalamimi.com/cartesian-theater.html">笛卡尔剧场</a></li>
-                <li><a href="http://lalamimi.com/commenter.html">评论</a></li>
-                <li><a href="http://lalamimi.com/about.html">关于</a></li>
+                <li><a href="cartesian-theater.html">笛卡尔剧场</a></li>
+                <li><a href="commenter.html">评论</a></li>
+                <li><a href="about.html">关于</a></li>
             </ul>
         </div>
-        <div class="article" id="post">          
+        <div class="article" id="post">     
+            <li class="year">...</li>     
             <ul>
-                <li class="year">2019</li>
-                <li><time>8-14</time><a href="articles\不确定与无知.html">不确定与无知</a></li>
-                <li><time>8-01</time><a href="articles\jia-zhi-tou-zi.html">价投</a></li>
-                <li><time>5-21</time><a href="articles\bu-yi-yang-ma.html">不一样吗?</a></li>
-                <br>
-                <li class="year">2018</li>
-                <li><time>8-25</time><a href="articles\kun-huo-yu-cai-xiang.html">困惑与猜想</a></li>
-                <li><time>8-21</time><a href="articles\cai-xiang-yu-kun-huo.html">猜想与困惑</a></li>
-                <li><time>8-05</time><a href="articles\shi-ji-yi-ge-yi-wai.html">史记：一个意外</a></li>
-                <br>
-                <li><time>7-03</time><a href="articles\wo-shi-zhe-yang-de-yi-ge-ren.html">我是这样一个人?</a></li>
-                <li><time>6-19</time><a href="articles\guang-gao.html">广告</a></li>
-				<li><time>4-15</time><a href="articles\xian-hua.html">闲话</a></li>
-				<br>
-                <li><time>2-12</time><a href="articles\chun-jie-kuai-le.html">春节快乐</a></li>
-                <br>
-                <li class="year">2017</li>
-                <li><time>11-23</time><a href="articles\shi-jian-de-liu-dong.html">时间的流动</a></li>
-                <li><time>11-19</time><a href="articles\yi-lan-zi-jing-ji.html">一篮子经济</a></li>
-                <li><time>11-10</time><a href="articles\yi-fen-sheng-ming.html">一份声明（修改版）</a></li>
-                <li><time>11-9</time><a href="articles\lun-er-san-shi.html">论二三事</a></li>
-                <br>
-                <li><time>10-27</time><a href="articles\li-shi-zhu-yi.html">历史主义</a></li>
-                <li><time>10-23</time><a href="articles\yi-qian-you-mo.html">一钱幽默</a></li>
-                <li><time>10-19</time><a href="articles/dan-nei-te-de-lun-zi.html">丹内特的‘轮子’</a></li>
-                <li><time>10-09</time><a href="articles/pao-huo.html">炮火</a></li>
-                <br>
-                <li><time>9-28</time><a href="articles/hi-mr-hayek.html">嗨，哈耶克先生 —— 反对派的声音</a></li>                
-                <li><time>9-08</time><a href="articles/gu-shi-shi-wu-tian.html">股市十五天</a></li>
-                <br>
-                <li><time>4-19</time><a href="articles/wen-da.html">问答</a></li>
-                <li class="year">2016</li>
-                <li><time>11-06</time><a href="articles/gan-zhi.html">感知</a></li>
-                <br>
-                <li><time>10-17</time><a href="articles/zi-wen-zi-da.html">自问自答:一个关于编程的问答(Q&A形式)</a></li>
-                <li><time>10-05</time><a href="articles/ren-de-jiao-ji-jing-yan-guan-cha.html">人的交际经验观察</a></li>
-                <br>
-                <li><time>9-12</time><a href="articles/yi-lu-zou-lai.html">一路走来</a></li>   
+                <li v-for="(todo,index) in todos" v-bind:value="index" v-on:click="goTo">
+                    <time>{{ todo.date }}</time><a href="article.html">{{ todo.title }}</a>
+                </li>
             </ul>
         </div>
         <div class="gotop">
@@ -70,9 +41,35 @@
     <div class="footer" id="foot">
         <p>
             Copyright © <time id="date">2016</time> 
-            <a href="/">Lalamimi</a>. 
+            <a href="/">lalamimi</a>. 
             All Rights Reserved. Themes by <a href="/">木馍</a>
         </p>
     </div>    
+</div>
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            todos: null
+        },
+        mounted(){
+            this.getJson()         
+        },
+        methods: {
+            getJson: function () {
+                axios.get('/demo.json').then(res => {
+                    this.todos = res.data
+                    // console.log(this.todos[0])
+                })               
+            },
+            goTo: function(event) {
+                var e = event.currentTarget
+                sessionStorage.setItem('key',JSON.stringify(this.todos[e.value]))
+            }
+        }
+    })
+
+</script>
 </body>
 </html>
