@@ -72,7 +72,8 @@
 					to = '/articles/' + this.todos['title'] + '.md'
 					axios.get(to).then(res => {
 						var content = res.data
-						document.getElementById("content").innerHTML = marked(content)
+						// 2021,11,4 marked修改了语法，+parse
+						document.getElementById("content").innerHTML = marked.parse(content) 
 						document.title = 'metaye | ' + this.todos['title']
 					})
 				}
